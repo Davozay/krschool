@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SchoolOfTheSpirit</title>
+    
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </head>
+  <style>
+    :root {
+      --bg-color: linear-gradient(
+        90deg,
+        rgb(219, 78, 22) 0%,
+        rgba(248, 253, 29, 1) 50%,
+        rgba(252, 102, 69, 1) 100%
+      );
+    }
+
+body{
+  overflow-x:hidden;
+}
+
+    
+    nav {
+      background: var(--bg-color);
+      position: relative;
+      z-index: 10; /* Ensures nav appears above other elements */
+    }
+  
+    .menubars {
+      background: var(--bg-color);
+      
+    }
+
+  
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
+      nav {
+        position: fixed; /* Keeps nav at the top while scrolling */
+        top: 0;
+        width: 100%;
+      }
+  
+      section {
+        
+        margin-top: 20px; /* Adds space below the nav to prevent overlap */
+      }
+  
+      .menubars {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+  
+
+  <body
+    class=" body -z-20 mx-w-[2000px] mx-auto to-neutral-900 bg-white dark:bg-neutral-800"
+  >
+    <nav class="navy mx-auto p-4 ">
+      <div class=" container mx-auto flex items-center justify-between">
+        <a
+          href="/"
+          aria-label="Go to Homepage"
+          class="focus:outline-none focus-visible:ring-4 ring-neutral-900 rounded-lg ring-offset-4 lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:top-9 z-50"
+        >
+          <img
+            class="lg:top-[-30px] lg:relative w-20 md:w-28 lg:w-56 rounded-[200px]"
+            src="./src/assets/mainlogo2.jpg"
+            alt="School Of The Spirit Logo"
+          />
+        </a>
+        <button
+          id="menu"
+          class="z-10 lg:hidden text-neutral-900 hover:opacity-75 transition-opacity"
+          aria-expanded="false"
+          aria-label="Open Menu"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-8 w-8"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+
+        <div
+          role="menubar"
+          class="menubars hidden flex-col gap-4 absolute right-0 left-0 top-16 shadow-xl p-6 text-lg text-center items-center lg:flex lg:flex-row lg:static lg:shadow-none lg:justify-between lg:w-full lg:rounded-[150px]"
+        >
+          <a
+            href="#"
+            class="py-1 px-6 hover:text-white transition duration-500 ease-in-out"
+            role="menuitem"
+            >Home</a
+          >
+          <!-- <a href="/" class="py-1 px-6  hover:text-white transition duration-500 ease-in-out " role="menuitem">Login</a> -->
+          <a
+            href="#footer"
+            class="py-1 px-6 hover:text-white transition duration-500 ease-in-out lg:mr-auto"
+            role="menuitem"
+            >Contact</a
+          >
+          <a
+            href="#courses-oh"
+            class="py-1 px-6 hover:text-white transition duration-500 ease-in-out "
+            role="menuitem"
+            >Courses</a
+          >
+          <a
+            href="https://forms.gle/GFeHmpJarP6HLW4Q9"
+            class="py-2 px-6 bg-gray-900 text-white shadow-xl hover:shadow-none transition-shadow ease-in-out rounded-md"
+            role="menuitem"
+            target="_blank"
+            >SignUp</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- <div id="moving-div" class=" block p-20 top-32 left-10 rounded-full cursor-pointer z-[100] fixed bg-amber-400  h-20 w-20">
+      <a href="top">top</a>
+      <br>
+      <a href="bottom">bottom</a>
+    </div> -->
+    <!-- 
+    <header class="relative pt-16 md:pt-24 lg:pt-48">
+      <div
+        class="absolute inset-0 bottom-8 md:bottom-24 xl:bottom-32 -z-10 bg-gdient-to-b from-amber-400 to-amber-600"
+      ></div>
+      <div class="container mx-auto grid-rows-1 place-items-end px-2">
+        <img src="./src/assets/pics.jpg" alt="students" class="row-start-1 row-end-2"/>
+        <img src="./src/assets/pics2.jpg" alt="" class="row-start-1 row-end-2"/>
+      </div>
+    </header> -->
+
+    <!-- <div class="h-11 pre-section" id="about">
+  <section  class="lg:top-20 lg:relative bg-gray-100 py-12 px-6">
+    <div class="container mx-auto text-center max-w-4xl">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">
+        About Kingdom Rescue School Of The Spirit
+      </h2>
+      <p class="text-gray-600 text-lg leading-relaxed mb-6">
+        Kingdom Rescue School Of The Spirit is a training ground for those who
+        feel the call to rescue lives and transform destinies. Our vision is to
+        empower individuals with the knowledge and tools to fulfill their divine
+        mandate.
+      </p>
+      <p class="text-gray-600 text-lg leading-relaxed mb-6">
+        We provide spiritual and practical lessons through 11 carefully curated
+        courses designed to inspire, teach, and equip our students.
+      </p>
+      <div class="mt-6">
+        <p class="text-xl font-semibold text-gray-700">
+          <em>"Do you feel the call to rescue lives?"</em>
+        </p>
+        <p class="text-xl font-semibold text-gray-700 mt-2">
+          <em>"Are you seeking knowledge and empowerment?"</em>
+        </p>
+      </div>
+    </div>
+  </section>
+</div>  -->
+
+    <!--Hero-boyss-->
+    <section class="relative sm:top-48">
+      <div
+        class="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28"
+      >
+        <!-- Content -->
+        <div class="flex flex-1 flex-col items-center lg:items-start ">
+          <div class="starts lg:mt-[-345px] pl-4 md:bg-center lg:z-40 relative">
+            <h2
+            
+              class=" text-3xl md:text-4 lg:text-5xl text-center lg:text-left mb-6 font-bold"
+            >
+              KINGDOM RESCUE SCHOOL OF THE SPIRIT
+            </h2>
+
+            <p
+              class="text-[27px] text-bookmark-grey text-lg text-center lg:text-left mb-6"
+              id="element"
+            ></p>
+
+
+
+
+            <!-- Button -->
+            <div class="flex justify-center flex-wrap gap-6 lg:relative -left-[12px]">
+              <button type="button" class="btn btn-Color">
+                <a href="https://forms.gle/GFeHmpJarP6HLW4Q9" target="_blank" rel="noopener noreferrer">Register</a> 
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Image -->
+        <div
+        class=" flex justify-center flex-1 mb-10 md:mb-16 lg:mb-0  sm:mt-[10rem]"
+        >
+        <img
+        class="relative  lg:-mt-[17rem] sm:-mt-[20rem]  w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full bg-cover lg:z-50 sm:-z-20"
+        src="./src/assets/pics.jpg"
+        alt=""
+        />
+      </div>
+    </div>
+    <!-- <div class="absolute -top-[10rem] -left-32 -z-10 aspect-square md:border-8 co bg-amber-400 rounded-full md:w-64 lg:w-96 xl:max-w-lg"></div> -->
+    
+  
+  <!-- Rounded Rectangle -->
+
+  <!-- <div class="hidden md:block overflow-hidden bg-amber-400 rounded-l-full absolute h-80 w-2/4 top-32 -z-10"></div> -->
+  <div class="roundRect"></div>
+  
+  
+  </section>
+
+
+  <!-- Overview -->
+
+  <section class="sec1 bg-white py-20 mt-20 lg:mt-60">
+    <!-- Heading 2-->
+
+    <div class="sm:w-3/4 md:w-4/6 lg:w-5/12 mx-auto px-2">
+      <h1 class="text-5xl text-center text-amber-600 drop-shadow-2xl">Overview</h1>
+      <p class="text-center text-gray-500 mt-4">
+        School of the Spirit is a one month course
+         for followers of Jesus who want to go deeper 
+         in their knowledge and experience of the Holy Spirit.
+          It is meant for ministers and believers who have a 
+          strong quest for spiritual understanding.
+           The school is also a spiritual ground where soldiers 
+           of Christ are trained and made, 
+           burning for Jesus. 
+          </p>
+        </div>
+        <!-- rounded rectangle 2-->
+        <div class="bg-amber-500 h-24  xl:mt-0 xl:absolute w-screen rounded-r-full -bottom-8 -left-3 -z-10"></div>
+      </div>
+
+
+ 
+        
+      
+    </div>
+    
+  </section>
+
+
+
+  <!--courses-->
+  <section id="courses-oh" style="padding: 50px 20px; background-color: #f9f9f9;">
+  <div id="courses-oh" style="text-align: center; margin-bottom: 30px;">
+    <h2 class="text-5xl text-center text-amber-600 drop-shadow-2xl">Courses Offered</h2>
+    <p style="font-size: 1.2em; color: #666;">Discover the life-transforming courses at Kingdom Rescue School Of The Spirit</p>
+  </div>
+  <div style="max-width: 800px; margin: 0 auto;">
+    <div class="accordion">
+      <div class="btn accordion-item cursor-pointer" style="margin-bottom: 10px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+        <h3 class="accordion-header text-amber-500 text-2xl hover:bg-amber-100" style="padding: 20px; background-color: #fff; cursor: pointer; transition: background-color 0.3s;">
+          The School of Power
+        </h3>
+        <div class="accordion-content" style="padding: 0 20px; background-color: #f9f9f9; display: none;">
+          <p>Learn to walk in the supernatural power of God.</p>
+        </div>
+      </div>
+      <div class="btn accordion-item cursor-pointer" style="margin-bottom: 10px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;">
+        <h3 class="accordion-header text-amber-500 text-2xl hover:bg-amber-100" style="padding: 20px; background-color: #fff; cursor: pointer; transition: background-color 0.3s;">
+          The School of Wisdom
+        </h3>
+        <div class="accordion-content" style="padding: 0 20px; background-color: #f9f9f9; display: none;">
+          <p>Grow in divine wisdom for daily living.</p>
+        </div>
+      </div>
+
+      <div class="w-max m-auto sticky ">
+        <h3>
+          <a href="https://forms.gle/GFeHmpJarP6HLW4Q9" target="_blank">
+            
+          <button class="text-lg rounded-md py-2 px-6 text-white bg-gray-900 shadow-xl transition ease-in-out delay-150 hover:text-gray-500  hover:bg-amber-500 duration-300" id="circi">For more courses register</button></a></h3>
+      </div>
+      <!-- Repeat the structure for other courses -->
+    </div>
+  </div>
+</section>
+
+  <!--about author-->
+  <section id="instructor" class="instructor-section relative -z-10">
+    <div class="instructor-container">
+      <div class="instructor-image">
+        <img class="rounded-full" src="./src/assets/pics.jpg" alt="Pastor Emmanuel Terkaa Akaager">
+      </div>
+      <div class="instructor-details">
+        <h2 class="randih2color">Meet Your Instructor</h2>
+        <h3>Pastor Emmanuel Terkaa Akaager (Smart)</h3>
+        <p>
+          Pastor Emmanuel is the president and founder of Kingdom Rescue School Of The Spirit. 
+          A revivalist with a reforming voice, he inspires believers to pursue intimacy with God.
+        </p>
+        <p>
+          His vision is to set 100 million souls on fire for God, and his passion is to see 
+          arenas filled with young people worshiping and turning to the Lord with supernatural encounters.
+        </p>
+      </div>
+    </div>
+    <!-- <div class="roundRect lg: z-40"> </div> -->
+    <div class="bg-amber-500 h-24  xl:mt-0 xl:absolute w-screen rounded-r-full -bottom-8 -left-3 -z-10"></div>
+  </section>
+  
+   <!-- Program details -->
+
+   <section id="sec1" class="program-details relative mt-20">
+    <h2 class="text-amber-500">Program Details</h2>
+    <div class="details-grid">
+      <div class="detail-item">
+        <img src="./src/assets/icons/clock.svg" alt="Clock Icon" class="icon" />
+        <h3>Schedule & Duration</h3>
+        <p>Saturdays only, March 2025, from 9 AM to 5 PM.</p>
+      </div>
+      <div class="detail-item">
+        <img src="./src/assets/icons/stopwatch.png" alt="Stopwatch Icon" class="icon" />
+        <h3>Session Length</h3>
+        <p>Each session lasts 7 hours.</p>
+      </div>
+      <div class="detail-item">
+        <img src="./src/assets/icons/certificate.png" alt="Certificate Icon" class="icon" />
+        <h3>Certification</h3>
+        <p>Certificate issued at the end of the program.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Who should register-->
+
+
+
+      <!--section-->
+      <section id="who-should-register" class="relative">
+        <!--arrow-->
+        <div class="">
+          <a href="./index.html">
+            <img
+              src="./src/assets/icons/arrow.png"
+              alt="arrow"
+              class="arrowverse cursor-pointer fixed lg:left-5 rounded-full sm:mb-14"
+              id="circi2"
+            />
+          </a>
+        </div>
+
+        <h1 class="text-3xl text-amber-600">Who Should Register?</h1>
+        <p class="text-lg">
+          If you're hungry for a deeper relationship with God, this is for you!
+        </p>
+        <div class="grid">
+          <div class="card">
+            <img
+              src="./src/assets/icons/minister.png"
+              alt="Icon for Ministers"
+              class="icon"
+            />
+            <img
+              src="./src/assets/imani2.jpg"
+              alt="Ministers"
+              class="category-image"
+            />
+            <h3>Ministers</h3>
+            <p>Deepen your ministry impact and spiritual gifts.</p>
+          </div>
+
+          <div class="card">
+            <img
+              src="./src/assets/icons/graduating-student.png"
+              alt="Icon for Students"
+              class="icon"
+            />
+            <img
+              src="./src/assets/imani3.jpg"
+              alt="Students"
+              class="category-image"
+            />
+            <h3>Students</h3>
+            <p>Discover your purpose and walk in dominion.</p>
+          </div>
+          <div class="card">
+            <img
+              src="./src/assets/icons/professionals.png"
+              alt="Icon for Professionals"
+              class="icon"
+            />
+            <img
+              src="./src/assets/imani.jpg"
+              alt="Professionals"
+              class="category-image"
+            />
+            <h3>Professionals</h3>
+            <p>Equip yourself to carry God’s presence to the workplace.</p>
+          </div>
+          <!-- Add more cards as needed -->
+        </div>
+      </section>
+      <!--Rounded rectangle-->
+      <div
+        class="bg-amber-500 h-24 xl:mt-0 xl:absolute w-screen rounded-r-full -left-3 -z-10"
+      ></div>
+    
+
+
+
+
+
+<!--last section hallelujah-->
+<section  style="background-color: #f9f9f9;" class="mother h-96">
+<div class="register-call relative lg:mt-40 bg-contain bg-center">
+  <div class="content">
+    <h2 id="element2"></h2>
+    <p id="element3"></p>
+    <!-- <div class="icon-container">
+    <img src="./src/assets/icons/click.png" alt="" id="click" class="relative left-[270px] top-[60px] z-40">
+  </div> -->
+    <a href="https://forms.gle/GFeHmpJarP6HLW4Q9" target="_blank" ><button class=" btn">Register Here</button></a>
+    
+  </div>
+</div>
+</section>
+
+
+<!-- Footer Section -->
+<footer id="footer" class="bg-gray-700 text-white py-20 ">
+  <div class="container mx-auto grid grid-cols-1 
+        md:grid-cols-3 gap-8 w-11/12">
+
+    <div class="flex items-center">
+      <h1 class="text-2xl font-bold">KINGDOM RESCUE SCHOOL OF THE SPIRIT</h1>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-bold mb-4">Contacts</h3>
+      <p>Phone: +234 8160079633</p>
+      <p>Email: <a href="mailto:smartakaager@gmail.com">smartakaager@gmail.com</a> </p>
+      <p>Address: 123 Main Street, City</p>
+    </div>
+
+    <div>
+      <h3 class="text-xl font-bold mb-4">Social Media</h3>
+      <!-- Social Icons -->
+    <div class=" flex space-x-4">
+      <a  href="https://www.instagram.com/smartakaager?igsh=MWVidWRvZWhzY2Y3bA==" target="_blank" style="margin: 0 15px; text-decoration: none; color: #fff;">
+        <!--Instagram-->
+        <img src="./src/assets/icons/instagram.png" alt="" class=" w-[40px] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-150">
+      </a>
+      <a href="https://m.facebook.com/smart.akaager/" target="_blank" style="margin: 0 15px; text-decoration: none; color: #fff;">
+        <!--Facebook-->
+        <img src="./src/assets/icons/facebook.png" alt="" class="w-[40px] transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-150">
+      </a>
+     
+    </div>
+    </div>
+
+
+
+  </div>
+   <!-- Tagline -->
+  <div class="tagline relative top-16 lg:text-center">
+   <p style="font-size: 16px; margin: 10px 0;">
+    "Equipping believers to walk in dominion and purpose."
+  </p>
+  <!-- Copyright -->
+  <p style="font-size: 14px; margin: 0;">
+    © 2025 Kingdom Rescue School Of The Spirit. All Rights Reserved.
+  </p>
+</div>
+</footer>
+
+
+
+
+
+
+    
+    <script type="module" src="/src/main.js"> 
+     
+     </script>
+    
+  </body>
+</html>
